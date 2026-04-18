@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Special Topics: 3D Design & Physical Computing Winter 2025</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+#M3A2 .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+#M3A2 .grid img {
+  width: 100% !important;
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  }
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 34665<br> Winter 2025</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+    <a href="#Module1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 1 Research</a> 
+    <a href="#ProjectConcept" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 1 Concept</a>
+    <a href="#Module2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 2 Research</a> 
+    <a href="#ProjectPrototype" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 2 Prototype and Research</a> 
+    <a href="#Module3" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 3 research</a>  
+    <a href="#ProjectProduct" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 3 Product</a> 
+    <a href="#ResearchSummation" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research Summation</a> 
+    <a href="#Reflection" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Reflection</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens
+<header class="w3-container w3-top w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Menu</span>
+</header> -->
+
+<!-- 
+  if you want to link your image to a video use one of the following alt links as an example:
+
+  alt="test1Lorem ipsum dolor sit amet, consectetur adipiscing elit test1Lorem ipsum dolor sit amet, consectetur adipiscing elit <a href='https://www.youtube.com/embed/tgbNymZ7vqY' target='_blank'><p>Project Video Link</p></a>"> 
+  alt="test2Lorem ipsum dolor sit amet, consectetur adipiscing elit <div class='container'><iframe class='responsive-iframe' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe></div>">
+
+-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Special Topics Case Study</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Research & Activity Documentation</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Zainab Ilyas</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+  </div>
+  <!-- Intro -->
+  <div id="Intro" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Introduction</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3> Throughout this course, I have explored the intersection of 3D motion graphics and projection mapping, focusing on how these techniques can be applied in retail environments to create engaging, immersive experiences. My research has involved experimenting with After Effects’ 3D motion graphic capabilities, studying projection mapping techniques, and analyzing real-world applications such as Nike and other retail installations. This process has allowed me to develop a deeper understanding of how motion graphics can enhance physical spaces and communicate ideas effectively. By combining layered animations, dynamic transitions, and spatial storytelling, I have been able to create visuals that not only capture attention but also guide viewers through a cohesive narrative. Overall, this work demonstrates the potential of motion graphics to transform environments and enhance user experiences through thoughtful integration of digital and physical design elements.
+    </h3>
+  </div>
+ <!-- Project 1-->
+  <div id="Module1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Module 1: Concept</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Research</h2>
+    <h3>Project 1 explores the merging of 3D motion graphics and projection mapping, outlining a process that began with experimenting with After Effects’ 3D design capabilities and evolved through research into projection mapping techniques and retail campaigns such as Nike’s installations. By combining layered animations, dynamic transitions, and spatial storytelling, I have developed a deeper understanding of how motion graphics can engage audiences in both digital and physical environments. Researching, experimenting, analyzing examples, and incorporating peer feedback have allowed me to refine my approach, identify the most effective scales and environments, and create cohesive, immersive visuals. Overall, this work demonstrates the potential of motion graphics to transform spaces, communicate ideas, and enhance experiences through thoughtful integration of digital and physical design elements.
+    </h3>
+  </div>
+  
+  <!-- Module 1 Photo grid (modal) -->
+  <div id="M1A1" >
+    <h2>Action Research Phase 1</h2>
+    <div class="grid">
+      <img src="images/M1A1/a1-1.png" style="width:100%" onclick="onClick(this)" alt="Through my current experience with AE, I have already played around with the software’s 3D Design Animation Space where you are able to take traditionally 2D elements and essentially transform them into a 3D composition."> 
+      <img src="images/M1A1/a1-2.png" style="width:100%" onclick="onClick(this)" alt="I came across this article by Adobe that explained how to import and animate 3D models. This was the exact stepping stone I wanted to explore throughout this course, combining 3D models, dynamic transitions, creative effects, and layered animation into one narrative.">
+      <img src="images/M1A1/a1-3.png" style="width:100%" onclick="onClick(this)" alt="In addition to 3D motion graphics, I also researched about projection mapping techniques using After Effects. These tutorials opened up possibilities for more dynamic and spatial storytelling in my future projects.">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="M1A2" class="w3-row-padding">
+    <h2>Action Research Phase 2</h2>
+    <div class="grid">
+      <img src="images/M1A2/nike-wall.png" style="width:100%" onclick="onClick(this)" alt="Thinking of ways I could merge both 3D motion graphics and projection mapping into a productive setting, I immediately thought of Retail Projection Mapping Installations. I discovered that Nike has produced a few projection mapping installations to enhance the physical environment, highlight products, and create an engaging experience for visitors. ">
+      <img src="images/M1A2/v1.png" style="width:100%" onclick="onClick(this)" alt="Visualization #1">
+      <img src="images/M1A2/v2.png" style="width:100%" onclick="onClick(this)" alt="Visualization #2 - Final">
+    </div>
+  </div>
+ <!-- Project 1 Concept -->
+  <div id="ProjectConcept" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 1: Concept</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3>This project aims to create a retail-focused projection mapping installation that combines 3D motion graphics and spatial storytelling to highlight a single product or small display. By integrating dynamic animations, precise transitions, and layered visual effects, the installation will transform a physical platform into an engaging experience. The goal is to design visuals that enhance the product browsing experience, using motion, colour, and rhythm thoughtfully to guide the viewer’s attention while maintaining a cohesive and polished visual style.
+    </h3>
+    <img src="images/M1A2/v2.png" style="width:100%" onclick="onClick(this)" alt="Final Visualization for Project 1 Concept">
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+ <!-- Project 2-->
+  <div id="Module2" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Module 2: Prototype</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Research</h2>
+    <h3>Project 2 explores the integration of 3D motion graphics and projection mapping to create a retail-focused installation that enhances the presentation of a physical product. Using After Effects as the primary tool, the process began with experimenting in 3D space and expanded into researching projection mapping techniques and real-world retail applications. Through this exploration, the project evolved from a broad investigation of motion graphics into a more focused approach that considers spatial context, scale, and how visuals interact with a physical object. The selection of AirPods Pro as the final product reflects a balance between creative potential and technical feasibility. Its simple form, consistent design, and strong visual identity allow for the integration of effects such as sound-waves, lighting, halation, and typography without overwhelming the product itself. The design emphasizes clarity and cohesion, ensuring that motion enhances the product experience rather than competing with it. The final prototype is a storyboard prototype that maps a complete projection mapping visualization intended to be displayed above or beside the physical product. Each scene is designed with spatial awareness, guiding viewer attention through controlled motion, intentional transitions, and a consistent visual language. Overall, this project demonstrates how motion graphics can extend beyond the screen to create immersive, engaging experiences that connect digital visuals with real-world environments.
+    </h3>
+  </div>
+  
+  <!-- Module 2 Photo grid (modal) -->
+  <div id="M2A1" >
+    <h2>Action Research Phase 1</h2>
+    <div class="grid">
+      <img src="images/M2A1/1.png" style="width:100%" onclick="onClick(this)" alt="Initially, I liked the conceptual freedom that perfumes had. The visuals could reflect the type of scent and lighting effects would look really cool. However, since the bottles are almost always clear and made of glass, the only way I would be able to make the motion graphic with proper rendering would be if I made the model myself and animated directly in Blender. That was not the direction I intended to take, so I moved on to the next subject."> 
+      <img src="images/M2A1/2.png" style="width:100%" onclick="onClick(this)" alt="Watches also had lots of concept potential, however, I realized very early on that the ticking of the watch would need to constant throughout the entire video. Facing a similar issue to the earlier subject, I moved on to the next subject. ">
+      <img src="images/M2A1/3.png" style="width:100%" onclick="onClick(this)" alt="Immediately I found headphones more promising. Not only did it open so many opportunities for visualizations and effects, but there were also no technical elements that needed specific animations, or any complicated textures that would have issues rendering in After Effects. This subject was definitely the top contender for my project.">
+      <img src="images/M2A1/4.png" style="width:100%" onclick="onClick(this)" alt="Most of the visualizations I came across were for athletic shoes which I didn’t mind initially. There were many ways to show movement through more abstract concepts, similar to the opportunities of the headphones. However, I noticed that this product’s advertisement is very reliant on the environment that it is intended to be used in. There were many visuals with water droplets and rough rocky terrain. Those are environments that I would not be able to create in After Effects."> 
+      <img src="images/M2A1/5.png" style="width:100%" onclick="onClick(this)" alt="Airpods in After Effects Test">
+      <img src="images/M2A1/6.png" style="width:100%" onclick="onClick(this)" alt="Final Model Selection - Apple Airpods Pro 3">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="M2A2" class="w3-row-padding">
+    <h2>Action Research Phase 2</h2>
+    <div class="grid">
+      <img src="images/M2A2/1.png" style="width:100%" onclick="onClick(this)" alt="This page shows the different ways an advertisement could display or showcase a product. Though a lot of the examples here are more for filmography, I might still be able to replicate the camera movements.">
+      <img src="images/M2A2/2.png" style="width:100%" onclick="onClick(this)" alt="Looking through their Typography database, I found lots of cool font styles, transitions and masking techniques that would look cool in my projection mapping visual.">
+      <img src="images/M2A2/3.png" style="width:100%" onclick="onClick(this)" alt="Though transitions aren’t very common in video advertisements lately, I’ve mainly seen match-cuts used the most, I feel that adding different kinds of transitions could make the projection feel more dynamic than just switching from scene to scene.">
+      <img src="images/M2A2/4.png" style="width:100%" onclick="onClick(this)" alt="This specific effect is one that I’ve seen in lots of music videos. Since headphones are commonly advertised alongside music, I feel that this effect will work well in the projection mapping visual.">
+      <img src="images/M2A2/5.png" style="width:100%" onclick="onClick(this)" alt="The last visual effect I wanted to incorporate was Halation. This effect along with regular light leaks and spotlights would add visual depth to the projection.">
+      <img src="images/M2A2/advert1.png" style="width:100%" onclick="onClick(this)" alt="Since my subject is going to be the Airpod Pros, I looked at the most recent Airpods advert. The main focus of their advert was the dancing filmography, but I also noticed a few other effects throughout the video. A few that I noticed were two types of sound-waves, typography and very intentional use of colour.">
+      <img src="images/M2A2/advert2.png" style="width:100%" onclick="onClick(this)" alt="I also looked at the adverts of older generation Airpods. Both adverts also incorporated dancing filmography, but one used far more colour than the other. The 2020 advert focused a lot on lighting, shadows and typography, whereas the 2024 advert utilized more traditional motion graphics and visual effects.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <!-- Project 2 Concept -->
+  <div id="ProjectPrototype" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 2: Concept</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>This project proposes a retail-focused projection mapping installation that highlights a single product, AirPods Pro, through 3D motion graphics and spatial storytelling developed in After Effects. Building on research into projection mapping techniques and product-based visual effects, the installation focuses on a smaller, tabletop-scale environment to create a cohesive and controlled experience. By integrating dynamic animations, intentional transitions, and layered visual effects such as sound-waves, lighting, and typography, the projection transforms a physical surface into an immersive, product-centered display.
+    </p>
+    <img src="images/final2/storyboard.png" style="width:100%" onclick="onClick(this)" alt="Protortype - Storyboard of the complete projection mapping visual. Each scene is designed with spatial awareness, guiding viewer attention through controlled motion, intentional transitions, and a consistent visual language.">
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+ <!-- Project 3-->
+  <div id="Module3" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Module 3: Product</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Research</h2>
+    <h3>Project 3 develops a retail-focused projection mapping visualization that highlights AirPods Pro through 3D motion graphics and spatial storytelling created in After Effects. The process combines experimentation with 3D animation, projection techniques, and product-based visual effects to design a cohesive, tabletop-scale installation. By integrating elements such as soundwaves, lighting, gradients, and typography, the visuals are designed to enhance the physical product without overwhelming it. Real-time projection testing informed key design decisions, ensuring that contrast, visibility, and spatial alignment effectively support the product within a physical environment.
+    </h3>
+  </div>
+  
+  <!-- Module 3 Photo grid (modal) -->
+  <div id="M3A1" >
+    <h2>Action Research Phase 1</h2>
+    <div class="grid">
+      <img src="images/M3A1/clip1.png" style="width:100%" onclick="onClick(this)" alt="Clip #1"> 
+      <img src="images/M3A1/clip2.png" style="width:100%" onclick="onClick(this)" alt="Clip #2">
+      <img src="images/M3A1/clip3.png" style="width:100%" onclick="onClick(this)" alt="Clip #3">
+      <img src="images/M3A1/clip4.png" style="width:100%" onclick="onClick(this)" alt="Clip #4">
+      <img src="images/M3A1/clip5.png" style="width:100%" onclick="onClick(this)" alt="Clip #5">
+      <img src="images/M3A1/clip6.png" style="width:100%" onclick="onClick(this)" alt="Clip #6">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <div id="M3A2" class="w3-row-padding">
+    <h2>Action Research Phase 2</h2>
+    <div class="grid">
+      <img src="images/M3A2/test1.jpeg" style="width:50%" onclick="onClick(this)" alt="Early into Activity 1, I decided to test how my visual would look when projected so I can eliminate any issues early on. To do this, I connected the Nebula Mars 3 Projector to my Macbook and in the Video settings on After Effects, I connected the preview to the projector. Any changes I made would immediately show in the preview, no need to export or render anything.">
+      <img src="images/M3A2/test2.jpeg" style="width:60%" onclick="onClick(this)" alt="In my first test, I noticed that the area where the Airpods are meant to be displayed in-person was very dark and it would be difficult to see it at all.">
+      <img src="images/M3A2/test3.jpeg" style="width:60%" onclick="onClick(this)" alt="As a possible solution, I tested an inverted colour version of my visual, basically turning all the black to white and vice-versa. I immediately found this version to be quite difficult to both look at and record as well. This test proved how much more vibrant my motion graphics looked on a dark contrasting background vs. a light contrasting background.">
+      <img src="images/M3A2/test4.jpeg" style="width:50%" onclick="onClick(this)" alt="As a compromise, I decided to create a circular spotlight. This allowed the “Airpods” to be highlighted and visible, without taking attention away from the rest of the projection mapping visual.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <!-- Project 3 Product -->
+  <div id="ProjectProduct" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project Product</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>This project develops a retail-focused projection mapping visualization that highlights AirPods Pro through 3D motion graphics and spatial storytelling created in After Effects. The process combines experimentation with 3D animation, projection techniques, and product-based visual effects to design a cohesive, tabletop-scale installation. By integrating elements such as soundwaves, lighting, gradients, and typography, the visuals are designed to enhance the physical product without overwhelming it. Real-time projection testing informed key design decisions, ensuring that contrast, visibility, and spatial alignment effectively support the product within a physical environment.
+    </p>
+    <video src="images/final3/IMG_7652.MOV" style="width:100%" controls></video>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round"></hr>
+
+  <!-- Research Summation -->
+  <div id="ResearchSummation" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Research Summation</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The research process for this project involved a combination of experimentation and analysis. Initially, I explored the capabilities of After Effects for creating 3D motion graphics, which provided a foundation for understanding how to manipulate digital elements in a spatial context. This experimentation was complemented by research into projection mapping techniques, which informed how to effectively integrate motion graphics with physical environments. Analyzing real-world applications, such as Nike’s retail installations, offered insights into how motion graphics can enhance product presentation and engage audiences. Throughout the process, I developed a cohesive concept that balances creative expression with technical feasibility. The iterative nature of the research allowed me to refine my approach, ensuring that the final prototype effectively communicates the intended narrative while maintaining visual appeal and spatial coherence.
+    </p>
+  </div>
+
+  <!-- Final Reflection -->
+  <div id="Reflection" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Reflection</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>This project explored the use of 3D motion graphics and projection mapping as a spatial design approach within a retail context, combining experimentation in After Effects with research into real-world projection installations and product advertising. Through iterative testing and action research, I developed my ideas by constantly refining both visual and technical elements, particularly when initial effects such as the halo concept did not work as intended and had to be reworked into more effective solutions like particle-based systems. Early projection testing was a key learning moment, highlighting the importance of designing for physical environments where lighting, contrast, and viewer perspective directly impact visibility and experience. Research into retail projection mapping and motion design references helped shape my visual direction, while exploring tools such as 3D modelling workflows and Eyecandy techniques supported the development of a cohesive visual language. Overall, the project strengthened my ability to balance creative ambition with technical constraints and deepened my understanding of motion graphics as a medium that can extend beyond the screen into immersive, spatial experiences.
+    </p>
+  </div>
+  
+   <!-- Modal for full size images on click-->
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image">
+      <h2 id="caption"></h2>
+
+      <!-- <div id="urLink"></div> -->
+      <!-- <a id="urLink" class="container"><iframe class="responsive-iframe"></iframe></a> -->
+    <!-- </div> -->
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+// Sidebar toggle for small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+</script>
+
+</body>
+</html>
